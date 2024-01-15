@@ -1,0 +1,101 @@
+.content{
+    width: 100%;
+    margin: 0px auto;
+	overflow: hidden;
+   
+    
+}
+
+.animate{
+    opacity: 0;
+    animation: content 5s forwards;
+    &-late{
+        opacity: 0;
+        animation: content 10s forwards;
+    }
+}
+
+@keyframes content {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+.titled-section{
+    &__title{
+        color: $black;
+        font-family: 'Mrs Saint Delafield', cursive;
+        font-size: 50px;
+        font-weight: 400;
+    }
+   
+}
+
+.invite{
+    &-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 40px;
+        // margin: 0px 40px 40px 40px;
+		border-radius: 10px 10px 200px 200px;
+		-moz-border-radius: 10px 10px 200px 200px;
+		-webkit-border-radius: 10px 10px 200px 200px;
+		border: 0px solid #000000;
+        background-color: $Almond;
+		overflow: hidden;
+    
+    }
+    &-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+		position: relative;
+
+		&_pd{
+			padding: 50px;
+		}
+    }
+    &-img{
+        img{
+            width: 100%;
+			border-radius: 140px 140px 140px 140px;
+			-moz-border-radius: 140px 140px 140px 140px;
+			-webkit-border-radius: 140px 140px 140px 140px;
+			border: 0px solid #000000;
+        }
+       
+    }
+}
+.img_background{
+	background-image: url('/wedding-web2/img/14.png');
+	background-size: 100% 100%;
+	width: 300px;
+	height: 300px;
+	transform: rotate(-90deg);
+	position: absolute;
+	left: 50%;
+}
+
+@media all and (min-width: 640px) and (max-width: 2600px){
+    .invite{
+        &-section{
+            flex-direction: row;
+            align-items: center;
+        }
+       
+        &-content{
+            width: 50%;
+        }
+        &-img{
+			display: flex;
+            width: 50%;
+            height: 500px;
+            padding: 10px;
+            justify-content: center;
+            img{
+                width: 80%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

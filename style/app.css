@@ -1,0 +1,801 @@
+@charset "UTF-8";
+@import url("https://fonts.fontstorage.com/import/madetheartistscript.css");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Mrs+Saint+Delafield&family=Nothing+You+Could+Do&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap");
+hr {
+  color: #E5E5E5;
+  border: 1px solid #E5E5E5;
+  margin-top: 30px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  line-height: 1.5;
+  min-height: 100%;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  font-family: "Comfortaa", cursive;
+  overflow-x: hidden;
+}
+
+body {
+  min-width: 320px;
+  background: #fffbf8;
+  width: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+html, body, main {
+  flex: 1 1 100%;
+}
+
+.o__container {
+  padding-left: calc(50vw - 600px);
+  padding-right: calc(50vw - 600px);
+}
+
+.o__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+.title-center {
+  text-align: center;
+}
+.title-uppercase {
+  text-transform: uppercase;
+}
+.title-margin {
+  margin-top: 15px;
+}
+
+.text-small {
+  font-size: 12px;
+}
+.text-start {
+  margin-bottom: 30px;
+}
+.text-wrap-center {
+  flex-wrap: wrap;
+  text-align: center;
+}
+.text-bold {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+}
+.text-italic {
+  font-style: italic;
+  font-size: 16px;
+}
+.text-title {
+  font-size: 25px;
+  font-style: italic;
+}
+.text-title-font-size {
+  font-size: 25px;
+}
+.text-margin-top {
+  margin-top: 20px;
+}
+.text-size-20 {
+  font-size: 20px;
+}
+
+.clock_section {
+  width: 100%;
+  padding: 40px;
+}
+.clock_sections {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.clock__span {
+  font-size: 14px;
+  padding-top: 20px;
+}
+
+.countdown {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  width: 100%;
+  padding: 40px;
+}
+.countdown__number {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.countdown__time {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.badge {
+  --badge-size: 160px;
+  --badge-color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--badge-size);
+  background: var(--black);
+  border-radius: 100%;
+  box-shadow: inset 0 0 0 0.9rem var(--badge-color);
+  animation: identifier 20s linear infinite;
+}
+
+.badge__emoji {
+  display: block;
+  margin: 0;
+  animation: identifier 20s linear infinite;
+  animation-direction: reverse;
+  transition: all 0.3s;
+}
+.badge__emoji > img {
+  width: 70px;
+  height: 70px;
+}
+.badge__emoji:hover {
+  opacity: 0.8;
+  transform: scale(1.2);
+}
+
+.badge__char {
+  --char-width: 10px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: calc(50% - var(--char-width) / 2);
+  height: calc(var(--badge-size) / 2);
+  width: var(--char-width);
+  background-repeat: round;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1rem;
+  font-weight: var(--char-font-weight);
+  font-size: var(--char-font-size);
+  color: #d57757;
+  font-family: var(--char-font-family);
+  transform-origin: bottom center;
+  transform: rotate(var(--char-rotate));
+}
+@keyframes identifier {
+  0% {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+.circle {
+  background-color: #d57757;
+  color: white;
+  border-radius: 200px 200px 200px 200px;
+  -moz-border-radius: 200px 200px 200px 200px;
+  -webkit-border-radius: 200px 200px 200px 200px;
+  border: 0px solid #000000;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 60%;
+  left: 70%;
+}
+
+@media all and (min-width: 640px) and (max-width: 2600px) {
+  .circle {
+    display: none;
+  }
+}
+.time__section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.time__section-pd {
+  padding-top: 200px;
+}
+.time__img {
+  width: 80%;
+  position: absolute;
+  top: 20%;
+  left: -4%;
+}
+.time__img > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.time__img-border {
+  border-radius: 200px 200px 0px 0px;
+  -moz-border-radius: 200px 200px 0px 0px;
+  -webkit-border-radius: 200px 200px 0px 0px;
+  border: 0px solid #000000;
+}
+.time__column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  text-align: center;
+}
+.time__row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.time__title {
+  border-bottom: 1px solid #d57757;
+}
+.time__text {
+  padding-top: 40px;
+}
+.time__border {
+  border-radius: 197px 0px 200px 0px;
+  -moz-border-radius: 197px 0px 200px 0px;
+  -webkit-border-radius: 197px 0px 200px 0px;
+  border: 1px solid white;
+  width: 80px;
+  height: 80px;
+}
+
+.card {
+  width: 50%;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.color-japoniga {
+  background-color: #d57757;
+}
+.color-almond {
+  background-color: #f2d6c3;
+}
+.color1 {
+  background-color: #d57757;
+}
+.color2 {
+  background-color: #935b37;
+}
+.color3 {
+  background-color: #aa9887;
+}
+.color4 {
+  background-color: #f5f0ed;
+}
+.color5 {
+  background-color: #1a140f;
+}
+
+@media all and (min-width: 300px) and (max-width: 640px) {
+  .time__section {
+    flex-direction: column;
+  }
+  .time__section-pd {
+    padding-top: 0px;
+  }
+  .time__img {
+    width: 90%;
+    height: 80%;
+  }
+  .time__column {
+    width: 80%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .card {
+    width: 80%;
+  }
+}
+.feedback {
+  padding: 50px 50px 0px 30px;
+  width: 100%;
+  background-color: #d57757;
+  border-radius: 200px 200px 0px 0px;
+  -moz-border-radius: 200px 200px 0px 0px;
+  -webkit-border-radius: 200px 200px 0px 0px;
+  border: 0px solid #000000;
+  color: white;
+}
+.feedback__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+.feedback__container-img, .feedback__container-forma {
+  width: 45%;
+  overflow: hidden;
+}
+.feedback__container-img > img {
+  border-radius: 27px 183px 87px 200px;
+  -moz-border-radius: 27px 183px 87px 200px;
+  -webkit-border-radius: 27px 183px 87px 200px;
+  border: 0px solid #000000;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.feedback__name {
+  position: relative;
+  margin-bottom: 20px;
+}
+.feedback__label-name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  color: white;
+  transform-origin: top left;
+  padding-bottom: 5px;
+}
+.feedback__input-name {
+  width: 100%;
+  padding: 10px;
+  background-color: #d57757;
+  border: 0px;
+  border-bottom: 1px solid #f2d6c3;
+  font-size: 16px;
+  font-style: italic;
+  color: #7f7f78;
+  height: 5vh;
+}
+.feedback__presence {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.feedback__presence-label {
+  padding-bottom: 10px;
+  color: #fff;
+}
+.feedback__presence > select {
+  width: 100%;
+  padding: 20px;
+  background-color: #d57757;
+  border: 0px;
+  border-bottom: 1px solid #f2d6c3;
+  color: white;
+}
+.feedback__presence > select > option {
+  color: #f2d6c3;
+  font-style: italic;
+  color: white;
+}
+.feedback__drinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.feedback__drinks-teams {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.feedback__drinks-teams > div {
+  padding-bottom: 5px;
+}
+.feedback__drinks-teams > div > label {
+  color: #fff;
+}
+.feedback__drinks-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: baseline;
+}
+.feedback__drinks-label, .feedback__drinks-title {
+  color: #fff;
+}
+.feedback__drinks-title {
+  font-size: 12px;
+}
+.feedback__submit {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.active {
+  color: blue;
+}
+.active .feedback__label-name {
+  top: -40px;
+}
+
+/* Сховати оригінальний вигляд чекбокса */
+input[type=checkbox], option {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  border: none;
+}
+
+/* Створити заміну для чекбокса */
+input[type=checkbox]::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%; /* Застосувати круглу форму */
+  border: 1px solid #f2d6c3; /* Змінити колір рамки за потребою */
+  background-color: transparent;
+  margin-right: 5px; /* Додатковий відступ між чекбоксом і текстом */
+}
+
+/* Змінити вигляд чекбокса при виборі */
+input[type=checkbox]:checked::before {
+  background-color: #E5E5E5; /* Застосувати колір за потребою */
+}
+
+label {
+  color: #fff;
+  padding-top: 5px;
+}
+
+input[type=submit] {
+  border-radius: 120px 120px 120px 120px;
+  -moz-border-radius: 120px 120px 120px 120px;
+  -webkit-border-radius: 120px 120px 120px 120px;
+  border: 1px solid #fff;
+  width: 200px;
+  height: 50px;
+  margin: 20px;
+  background-color: #f2d6c3;
+  color: #d57757;
+}
+
+input[type=submit]:hover {
+  background-color: #c4661f;
+}
+
+@media all and (min-width: 300px) and (max-width: 640px) {
+  .feedback__container {
+    flex-direction: column;
+  }
+  .feedback__container-img, .feedback__container-forma {
+    width: 100%;
+  }
+}
+.photo__section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding-top: 40px;
+}
+.photo__img {
+  width: 30%;
+}
+.photo__img > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 200px 200px 0px 0px;
+  -moz-border-radius: 200px 200px 0px 0px;
+  -webkit-border-radius: 200px 200px 0px 0px;
+  border: 0px solid #000000;
+}
+
+.content {
+  width: 100%;
+  margin: 0px auto;
+  overflow: hidden;
+}
+
+.animate {
+  opacity: 0;
+  animation: content 5s forwards;
+}
+.animate-late {
+  opacity: 0;
+  animation: content 10s forwards;
+}
+
+@keyframes content {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.titled-section__title {
+  color: #000000;
+  font-family: "Mrs Saint Delafield", cursive;
+  font-size: 50px;
+  font-weight: 400;
+}
+
+.invite-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+  border-radius: 10px 10px 200px 200px;
+  -moz-border-radius: 10px 10px 200px 200px;
+  -webkit-border-radius: 10px 10px 200px 200px;
+  border: 0px solid #000000;
+  background-color: #f2d6c3;
+  overflow: hidden;
+}
+.invite-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.invite-content_pd {
+  padding: 50px;
+}
+.invite-img img {
+  width: 100%;
+  border-radius: 140px 140px 140px 140px;
+  -moz-border-radius: 140px 140px 140px 140px;
+  -webkit-border-radius: 140px 140px 140px 140px;
+  border: 0px solid #000000;
+}
+
+.img_background {
+  background-image: url("/wedding-web2/img/14.png");
+  background-size: 100% 100%;
+  width: 300px;
+  height: 300px;
+  transform: rotate(-90deg);
+  position: absolute;
+  left: 50%;
+}
+
+@media all and (min-width: 640px) and (max-width: 2600px) {
+  .invite-section {
+    flex-direction: row;
+    align-items: center;
+  }
+  .invite-content {
+    width: 50%;
+  }
+  .invite-img {
+    display: flex;
+    width: 50%;
+    height: 500px;
+    padding: 10px;
+    justify-content: center;
+  }
+  .invite-img img {
+    width: 80%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  overflow: hidden;
+  padding: 50px 50px 30px 30px;
+  background-color: #7d785a;
+  color: white;
+}
+.container__row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 30px;
+}
+.container__column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+}
+.container_img {
+  width: 25%;
+}
+.container_img > img {
+  width: 100%;
+  height: 100%;
+}
+.container__center {
+  text-align: center;
+}
+
+.black {
+  background: #504b49;
+  opacity: 0;
+  transform: translateX(-150%);
+  animation: blac 4s forwards;
+}
+
+@keyframes blac {
+  0% {
+    transform: translateX(-150%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.black-end {
+  opacity: 0;
+  transform: translateX(150%);
+  animation: end 4s forwards;
+}
+
+@keyframes end {
+  0% {
+    transform: translateX(150%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.hintofred {
+  background: rgb(194, 194, 194);
+  opacity: 0;
+  animation: content 10s forwards;
+}
+
+.tapa {
+  background: #7f7f78;
+  color: #fff;
+  opacity: 0;
+  animation: content 12s forwards;
+}
+
+.img-border-radius {
+  border-radius: 300px 300px 300px 300px;
+  -moz-border-radius: 300px 300px 300px 300px;
+  -webkit-border-radius: 300px 300px 300px 300px;
+  border: 0px solid #000000;
+  padding: 15px;
+}
+
+@media all and (min-width: 640px) and (max-width: 2600px) {
+  .title {
+    font-size: 40px;
+  }
+}
+.programa__section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #d57757;
+  flex-direction: column;
+  padding: 40px;
+  color: white;
+}
+.programa__section > h1 {
+  font-size: 36px;
+}
+.programa__row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.programa__column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.programa__title {
+  border-bottom: 1px solid #f2d6c3;
+  margin: 20px;
+  width: 40vh;
+}
+.programa_items {
+  width: 50%;
+}
+.programa__item {
+  position: relative;
+  background-color: #f2d6c3;
+  border-radius: 200px 200px 0px 0px;
+  -moz-border-radius: 200px 200px 0px 0px;
+  -webkit-border-radius: 200px 200px 0px 0px;
+  border: 0px solid #000000;
+  width: 30%;
+  height: 70vh;
+}
+.programa_background {
+  position: absolute;
+  background-image: url("/wedding-web2/img/17.png");
+  background-size: 100% 100%;
+  width: 600px;
+  height: 600px;
+}
+
+@media all and (min-width: 300px) and (max-width: 640px) {
+  .programa__item {
+    display: none;
+  }
+}
+.organization {
+  padding: 50px 50px 0px 30px;
+  width: 100%;
+}
+.organization__items {
+  border-radius: 53px 53px 53px 53px;
+  -moz-border-radius: 53px 53px 53px 53px;
+  -webkit-border-radius: 53px 53px 53px 53px;
+  border: 2px solid #7f7f78;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.organization__items-square {
+  background: #7f7f78;
+  border-radius: 0px 53px 0px 53px;
+  -moz-border-radius: 0px 53px 0px 53px;
+  -webkit-border-radius: 0px 53px 0px 53px;
+  width: 10vh;
+  height: 10vh;
+}
+.organization__items-end {
+  display: flex;
+  justify-content: flex-end;
+}
+.organization__items-content {
+  padding: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  justify-content: space-between;
+  margin: 20px;
+}
+.organization__title, .organization__text {
+  padding-bottom: 20px;
+}/*# sourceMappingURL=app.css.map */

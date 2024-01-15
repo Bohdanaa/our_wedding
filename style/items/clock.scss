@@ -1,0 +1,135 @@
+.clock{
+	&_section{
+		width: 100%;
+		padding: 40px;
+		&s{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+	}
+	&__span{
+		font-size: 14px;
+		padding-top: 20px;
+	}
+}
+.countdown{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	width: 100%;
+	padding: 40px;
+	&__number{
+		display: flex;
+		flex-direction: column;
+		padding: 20px;
+	}
+	&__time{
+		font-size: 40px;
+		font-weight: bold;
+	}
+}
+.badge {
+	--badge-size: 160px;
+	--badge-color: var(--black);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	// width: var(--badge-size);
+	height: var(--badge-size);
+
+	background: var(--black);
+	border-radius: 100%;
+	box-shadow: inset 0 0 0 0.9rem var(--badge-color);
+	animation: identifier 20s linear infinite;
+}
+
+.badge__emoji {
+	display: block;
+	margin: 0;
+	animation: identifier 20s linear infinite;
+	animation-direction: reverse;
+	transition: all 0.3s;
+
+	&>img{
+		width: 70px;
+		height: 70px;
+	}
+
+	&:hover {
+		opacity: 0.8;
+		transform: scale(1.2);
+	}
+}
+
+.badge__char {
+	--char-width: 10px;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: calc(50% - var(--char-width) / 2);
+	height: calc(var(--badge-size) / 2);
+	width: var(--char-width);
+	background-repeat: round;
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 1rem;
+
+	font-weight: var(--char-font-weight);
+	font-size: var(--char-font-size);
+	color: $Japonica;
+	font-family: var(--char-font-family);
+	transform-origin: bottom center;
+	transform: rotate(var(--char-rotate));
+}
+
+@-webkit-keyframes identifier {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	to {
+		-webkit-transform: rotate(1turn);
+		transform: rotate(1turn);
+	}
+}
+
+@keyframes identifier {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	to {
+		-webkit-transform: rotate(1turn);
+		transform: rotate(1turn);
+	}
+}
+
+.circle{
+	background-color: $Japonica;
+	color: white;
+	border-radius: 200px 200px 200px 200px;
+	-moz-border-radius: 200px 200px 200px 200px;
+	-webkit-border-radius: 200px 200px 200px 200px;
+	border: 0px solid #000000;
+	width: 100px;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 60%;
+	left: 70%;
+}
+@media all and (min-width: 640px) and (max-width: 2600px) {
+	.circle{
+		display: none;
+	}
+}
