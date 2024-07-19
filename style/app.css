@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Mrs+Saint+Delafield&family=Nothing+You+Could+Do&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap");
 hr {
   color: #E5E5E5;
   border: 1px solid #E5E5E5;
@@ -23,14 +24,14 @@ html body {
   min-height: 100%;
   font-weight: 400;
   font-style: normal;
-  font-size: 16px;
-  font-family: "Comfortaa", cursive;
+  font-size: 20px;
+  font-family: "Gowun Batang", serif;
   overflow-x: hidden;
 }
 
 body {
   min-width: 320px;
-  background: #fffbf8;
+  background: #fcf7f4;
   width: 100%;
 }
 
@@ -95,7 +96,7 @@ html, body, main {
   font-style: italic;
 }
 .text-title-font-size {
-  font-size: 25px;
+  font-size: 35px;
 }
 .text-margin-top {
   margin-top: 20px;
@@ -181,7 +182,7 @@ html, body, main {
   line-height: 1rem;
   font-weight: var(--char-font-weight);
   font-size: var(--char-font-size);
-  color: #d57757;
+  color: black;
   font-family: var(--char-font-family);
   transform-origin: bottom center;
   transform: rotate(var(--char-rotate));
@@ -224,7 +225,11 @@ html, body, main {
   width: 100%;
 }
 .time__section-pd {
-  padding-top: 200px;
+  padding-top: 100px;
+}
+.time__before::before {
+  content: "LOCATION";
+  font-size: 60px;
 }
 .time__img {
   width: 80%;
@@ -237,11 +242,12 @@ html, body, main {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  transform: rotate(45deg);
 }
 .time__img-border {
-  border-radius: 200px 200px 0px 0px;
-  -moz-border-radius: 200px 200px 0px 0px;
-  -webkit-border-radius: 200px 200px 0px 0px;
+  border-radius: 57px 57px 57px 57px;
+  -moz-border-radius: 57px 57px 57px 57px;
+  -webkit-border-radius: 57px 57px 57px 57px;
   border: 0px solid #000000;
 }
 .time__column {
@@ -260,11 +266,14 @@ html, body, main {
   align-items: center;
   width: 100%;
 }
-.time__title {
-  border-bottom: 1px solid #d57757;
+.time-title {
+  color: #e4e0db;
+  font-style: italic;
+  font-size: 30px;
 }
 .time__text {
   padding-top: 40px;
+  font-size: 25px;
 }
 .time__border {
   border-radius: 197px 0px 200px 0px;
@@ -279,11 +288,11 @@ html, body, main {
   width: 50%;
   height: 400px;
   position: relative;
-  overflow: hidden;
 }
 
 .color-japoniga {
-  background-color: #d57757;
+  background-color: #e4e0db;
+  transform: rotate(-45deg);
 }
 .color-almond {
   background-color: #f2d6c3;
@@ -308,9 +317,6 @@ html, body, main {
   .time__section {
     flex-direction: column;
   }
-  .time__section-pd {
-    padding-top: 0px;
-  }
   .time__img {
     width: 90%;
     height: 80%;
@@ -324,15 +330,25 @@ html, body, main {
     width: 80%;
   }
 }
+@media all and (min-width: 640px) and (max-width: 2600px) {
+  .time__img {
+    position: relative;
+    width: 100%;
+  }
+  .time__img > img {
+    transform: none;
+  }
+  .color-japoniga {
+    transform: none;
+  }
+  .time__section {
+    height: 100vh;
+    padding: 0;
+  }
+}
 .feedback {
   padding: 50px 50px 0px 30px;
   width: 100%;
-  background-color: #d57757;
-  border-radius: 200px 200px 0px 0px;
-  -moz-border-radius: 200px 200px 0px 0px;
-  -webkit-border-radius: 200px 200px 0px 0px;
-  border: 0px solid #000000;
-  color: white;
 }
 .feedback__container {
   display: flex;
@@ -341,19 +357,19 @@ html, body, main {
   flex-wrap: nowrap;
   width: 100%;
 }
+.feedback__container::before {
+  content: "RSVP";
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+}
 .feedback__container-img, .feedback__container-forma {
   width: 45%;
   overflow: hidden;
 }
-.feedback__container-img > img {
-  border-radius: 27px 183px 87px 200px;
-  -moz-border-radius: 27px 183px 87px 200px;
-  -webkit-border-radius: 27px 183px 87px 200px;
-  border: 0px solid #000000;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+.feedback__container-forma > h1 {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 .feedback__name {
   position: relative;
@@ -364,20 +380,19 @@ html, body, main {
   top: 0;
   left: 0;
   transition: all 0.3s ease;
+  color: black;
   pointer-events: none;
-  color: white;
   transform-origin: top left;
   padding-bottom: 5px;
 }
 .feedback__input-name {
   width: 100%;
   padding: 10px;
-  background-color: #d57757;
   border: 0px;
-  border-bottom: 1px solid #f2d6c3;
+  border-bottom: 1px solid black;
   font-size: 16px;
   font-style: italic;
-  color: #7f7f78;
+  color: black;
   height: 5vh;
 }
 .feedback__presence {
@@ -387,20 +402,19 @@ html, body, main {
 }
 .feedback__presence-label {
   padding-bottom: 10px;
-  color: #fff;
+  color: black;
 }
 .feedback__presence > select {
   width: 100%;
   padding: 20px;
-  background-color: #d57757;
   border: 0px;
-  border-bottom: 1px solid #f2d6c3;
-  color: white;
+  border-bottom: 1px solid black;
+  color: black;
 }
 .feedback__presence > select > option {
-  color: #f2d6c3;
+  color: black;
   font-style: italic;
-  color: white;
+  color: black;
 }
 .feedback__drinks {
   display: flex;
@@ -416,7 +430,7 @@ html, body, main {
   padding-bottom: 5px;
 }
 .feedback__drinks-teams > div > label {
-  color: #fff;
+  color: black;
 }
 .feedback__drinks-row {
   display: flex;
@@ -425,7 +439,7 @@ html, body, main {
   align-items: baseline;
 }
 .feedback__drinks-label, .feedback__drinks-title {
-  color: #fff;
+  color: black;
 }
 .feedback__drinks-title {
   font-size: 12px;
@@ -459,18 +473,18 @@ input[type=checkbox]::before {
   width: 16px;
   height: 16px;
   border-radius: 50%; /* Застосувати круглу форму */
-  border: 1px solid #f2d6c3; /* Змінити колір рамки за потребою */
+  border: 1px solid black; /* Змінити колір рамки за потребою */
   background-color: transparent;
   margin-right: 5px; /* Додатковий відступ між чекбоксом і текстом */
 }
 
 /* Змінити вигляд чекбокса при виборі */
 input[type=checkbox]:checked::before {
-  background-color: #E5E5E5; /* Застосувати колір за потребою */
+  background-color: black; /* Застосувати колір за потребою */
 }
 
 label {
-  color: #fff;
+  color: black;
   padding-top: 5px;
 }
 
@@ -478,16 +492,24 @@ input[type=submit] {
   border-radius: 120px 120px 120px 120px;
   -moz-border-radius: 120px 120px 120px 120px;
   -webkit-border-radius: 120px 120px 120px 120px;
-  border: 1px solid #fff;
+  border: 1px solid black;
   width: 200px;
   height: 50px;
   margin: 20px;
-  background-color: #f2d6c3;
-  color: #d57757;
+  background-color: white;
+  color: black;
 }
 
 input[type=submit]:hover {
-  background-color: #c4661f;
+  background-color: black;
+}
+
+.rsvp {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @media all and (min-width: 300px) and (max-width: 640px) {
@@ -548,16 +570,74 @@ input[type=submit]:hover {
   font-weight: 400;
 }
 
+.first_section {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  margin-top: 100px;
+}
+.first_section-row {
+  display: flex;
+  flex-direction: row;
+}
+.first_section-date {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  line-height: 80px;
+  font-size: 60px;
+  font-family: "Gowun Batang", serif;
+  font-style: normal;
+  font-weight: 400;
+}
+.first_section-line {
+  height: auto;
+  width: 1px;
+  margin-left: 40px;
+  margin-right: 40px;
+  background-color: grey;
+}
+.first_section-save {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: center;
+}
+.first_section-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  padding-top: 100px;
+  font-size: 60px;
+}
+
+.second-section {
+  background-color: #1b1b1b;
+  border-radius: 57px 57px 57px 57px;
+  -moz-border-radius: 57px 57px 57px 57px;
+  -webkit-border-radius: 57px 57px 57px 57px;
+  border: 0px solid #000000;
+  color: white;
+  padding: 40px;
+  height: 700px;
+  padding-top: 90px;
+}
+.second-section::before {
+  content: "OUR DEARS";
+  font-size: 50px;
+  opacity: 0.5;
+  font-style: italic;
+  display: flex;
+  justify-content: center;
+}
+
 .invite-section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 40px;
-  border-radius: 10px 10px 200px 200px;
-  -moz-border-radius: 10px 10px 200px 200px;
-  -webkit-border-radius: 10px 10px 200px 200px;
-  border: 0px solid #000000;
-  background-color: #f2d6c3;
   overflow: hidden;
 }
 .invite-content {
@@ -587,13 +667,106 @@ input[type=submit]:hover {
   left: 50%;
 }
 
+.drescode__section {
+  display: flex;
+  flex-direction: column;
+  font-size: 60px;
+  line-height: 30px;
+  padding: 40px;
+}
+.drescode__title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+}
+.drescode-pa {
+  position: absolute;
+  left: 35%;
+  top: 65%;
+}
+.drescode_column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 24px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.drescode_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.drescode_border {
+  border-radius: 50%;
+  border: 1px solid black;
+  width: 80px;
+  height: 80px;
+}
+
+.telegram {
+  display: flex;
+  flex-direction: column;
+}
+.telegram::before {
+  content: "TELEGRAM";
+  font-size: 60px;
+  text-align: center;
+}
+.telegram_row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.telegram-img {
+  width: 80%;
+  text-align: center;
+}
+.telegram-img > img {
+  width: 50%;
+}
+.telegram__span {
+  font-size: 24px;
+  width: 80%;
+  font-family: "Gowun Batang", serif;
+  display: flex;
+  flex-direction: column;
+}
+
 @media all and (min-width: 640px) and (max-width: 2600px) {
+  .drescode__title {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .drescode-pa {
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+  .first_section {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+  .first_section-save {
+    justify-content: center;
+  }
+  .second-section {
+    height: 100%;
+    padding: 100px;
+  }
   .invite-section {
     flex-direction: row;
     align-items: center;
   }
   .invite-content {
-    width: 50%;
+    width: 100%;
   }
   .invite-img {
     display: flex;
@@ -607,6 +780,31 @@ input[type=submit]:hover {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  .rsvp {
+    width: 50%;
+    position: absolute;
+    top: 350vh;
+  }
+  .telegram_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .telegram-img {
+    width: 50%;
+    text-align: center;
+  }
+  .telegram-img > img {
+    width: 50%;
+  }
+  .telegram__span {
+    font-size: 24px;
+    width: 50%;
+    font-family: "Gowun Batang", serif;
+    display: flex;
+    flex-direction: column;
   }
 }
 .container {
@@ -710,13 +908,17 @@ input[type=submit]:hover {
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color: #d57757;
   flex-direction: column;
   padding: 40px;
-  color: white;
 }
 .programa__section > h1 {
   font-size: 36px;
+}
+.programa__section::before {
+  content: "TIMING";
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
 }
 .programa__row {
   display: flex;
@@ -741,7 +943,7 @@ input[type=submit]:hover {
 }
 .programa__item {
   position: relative;
-  background-color: #f2d6c3;
+  background-color: #e4e0db;
   border-radius: 200px 200px 0px 0px;
   -moz-border-radius: 200px 200px 0px 0px;
   -webkit-border-radius: 200px 200px 0px 0px;

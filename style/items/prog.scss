@@ -3,14 +3,18 @@
 		display: flex;
 		justify-content: center;
 		width: 100%;
-		background-color: $Japonica;
 		flex-direction: column;
 		padding: 40px;
-		color: white;
 
 		&>h1{
 			font-size: 36px;
 		}
+	}
+	&__section::before{
+		content: "TIMING";
+		font-size: 60px;
+		display: flex;
+		justify-content: center;
 	}
 
 	&__row {
@@ -39,7 +43,7 @@
 	}
 	&__item{
 		position: relative;
-		background-color: $Almond;
+		background-color: #e4e0db;
 		border-radius: 200px 200px 0px 0px;
 		-moz-border-radius: 200px 200px 0px 0px;
 		-webkit-border-radius: 200px 200px 0px 0px;

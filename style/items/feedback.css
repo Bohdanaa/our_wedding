@@ -1,0 +1,175 @@
+@charset "UTF-8";
+.feedback {
+  padding: 50px 50px 0px 30px;
+  width: 100%;
+}
+.feedback__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+.feedback__container::before {
+  content: "RSVP";
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+}
+.feedback__container-img, .feedback__container-forma {
+  width: 45%;
+  overflow: hidden;
+}
+.feedback__container-forma > h1 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.feedback__name {
+  position: relative;
+  margin-bottom: 20px;
+}
+.feedback__label-name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease;
+  color: black;
+  pointer-events: none;
+  transform-origin: top left;
+  padding-bottom: 5px;
+}
+.feedback__input-name {
+  width: 100%;
+  padding: 10px;
+  border: 0px;
+  border-bottom: 1px solid black;
+  font-size: 16px;
+  font-style: italic;
+  color: black;
+  height: 5vh;
+}
+.feedback__presence {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.feedback__presence-label {
+  padding-bottom: 10px;
+  color: black;
+}
+.feedback__presence > select {
+  width: 100%;
+  padding: 20px;
+  border: 0px;
+  border-bottom: 1px solid black;
+  color: black;
+}
+.feedback__presence > select > option {
+  color: black;
+  font-style: italic;
+  color: black;
+}
+.feedback__drinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.feedback__drinks-teams {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.feedback__drinks-teams > div {
+  padding-bottom: 5px;
+}
+.feedback__drinks-teams > div > label {
+  color: black;
+}
+.feedback__drinks-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: baseline;
+}
+.feedback__drinks-label, .feedback__drinks-title {
+  color: black;
+}
+.feedback__drinks-title {
+  font-size: 12px;
+}
+.feedback__submit {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.active {
+  color: blue;
+}
+.active .feedback__label-name {
+  top: -40px;
+}
+
+/* Сховати оригінальний вигляд чекбокса */
+input[type=checkbox], option {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  border: none;
+}
+
+/* Створити заміну для чекбокса */
+input[type=checkbox]::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%; /* Застосувати круглу форму */
+  border: 1px solid black; /* Змінити колір рамки за потребою */
+  background-color: transparent;
+  margin-right: 5px; /* Додатковий відступ між чекбоксом і текстом */
+}
+
+/* Змінити вигляд чекбокса при виборі */
+input[type=checkbox]:checked::before {
+  background-color: black; /* Застосувати колір за потребою */
+}
+
+label {
+  color: black;
+  padding-top: 5px;
+}
+
+input[type=submit] {
+  border-radius: 120px 120px 120px 120px;
+  -moz-border-radius: 120px 120px 120px 120px;
+  -webkit-border-radius: 120px 120px 120px 120px;
+  border: 1px solid black;
+  width: 200px;
+  height: 50px;
+  margin: 20px;
+  background-color: white;
+  color: black;
+}
+
+input[type=submit]:hover {
+  background-color: black;
+}
+
+.rsvp {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media all and (min-width: 300px) and (max-width: 640px) {
+  .feedback__container {
+    flex-direction: column;
+  }
+  .feedback__container-img, .feedback__container-forma {
+    width: 100%;
+  }
+}/*# sourceMappingURL=feedback.css.map */
