@@ -784,7 +784,7 @@ input[type=submit]:hover {
   .rsvp {
     width: 50%;
     position: absolute;
-    top: 400vh;
+    top: 420vh;
   }
   .telegram_row {
     display: flex;
@@ -953,7 +953,7 @@ input[type=submit]:hover {
 }
 .programa_background {
   position: absolute;
-  background-image: url("img/17.png");
+  background-image: url("./img/17.png");
   background-size: 100% 100%;
   width: 600px;
   height: 600px;
