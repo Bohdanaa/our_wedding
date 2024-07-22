@@ -28,84 +28,22 @@
     }
    
 }
-.first{
-	&_section{
-		display: flex;
-		flex-direction: column;
-		padding: 40px;
-		margin-top: 100px;
 
-		&-row{
-			display: flex;
-			flex-direction: row;
-			
-			
-		}
-		&-date{
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			justify-content: flex-start;
-			line-height: 80px;
-			font-size: 60px;
-			font-family: "Gowun Batang", serif;
-			font-style: normal;
-			font-weight: 400;
-		}
-		&-line{
-			height: auto;
-			width: 1px;
-			margin-left: 40px;
-			margin-right: 40px;
-
-			background-color: grey;
-		}
-		&-save{
-			display: flex;
-			flex-direction: column;
-			justify-content: flex-end;
-
-			text-align: center;
-		}
-		&-column{
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-self: center;
-			padding-top: 100px;
-			font-size: 60px;
-		}
-	}
-}
-.second{
-	&-section{
-		background-color: #1b1b1b;
-		border-radius: 57px 57px 57px 57px;
-		-moz-border-radius: 57px 57px 57px 57px;
-		-webkit-border-radius: 57px 57px 57px 57px;
-		border: 0px solid #000000;
-		color: white;
-		padding: 40px;
-		height: 700px;
-		padding-top: 90px;
-	}
-	&-section::before{
-		content: "OUR DEARS";
-		font-size: 50px;
-		opacity: 0.5;
-		font-style: italic;
-		display: flex;
-		justify-content: center;
-
-	}
-}
 .invite{
     &-section{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         padding: 40px;
+        // margin: 0px 40px 40px 40px;
+		border-radius: 10px 10px 200px 200px;
+		-moz-border-radius: 10px 10px 200px 200px;
+		-webkit-border-radius: 10px 10px 200px 200px;
+		border: 0px solid #000000;
+        background-color: #1b1b1b;
 		overflow: hidden;
+		color: white;
+    
     }
     &-content{
         display: flex;
@@ -129,7 +67,7 @@
     }
 }
 .img_background{
-	background-image: url('/wedding-web2/img/14.png');
+
 	background-size: 100% 100%;
 	width: 300px;
 	height: 300px;
@@ -137,108 +75,8 @@
 	position: absolute;
 	left: 50%;
 }
-.drescode{
-	&__section{
-		display: flex;
-		flex-direction: column;
-		font-size: 60px;
-		line-height: 30px;
-		
-		padding: 40px;
-	}
-	&__title{
-		display: flex;
-		align-items: flex-start;
-		justify-content: flex-start;
-		position: relative;
-	}
-	&-pa{
-		position: absolute;
-		left: 35%;
-		top: 65%;
 
-	}
-	&_column{
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		text-align: center;
-		font-size: 24px;
-		padding-top: 50px;
-		padding-bottom: 50px;
-	}
-	&_row{
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-	}
-	&_border{
-		border-radius: 50%;
-		border:1px solid black;
-		width: 80px;
-		height: 80px;
-	}
-}
-.telegram{
-	display: flex;
-	flex-direction: column;
-
-	&::before{
-		content:"TELEGRAM";
-		font-size: 60px;
-		text-align: center;
-		
-	}
-	&_row{
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		align-items: center;
-	}
-	&-img{
-		width: 80%;
-		text-align: center;
-		&>img{
-			width: 50%;
-		}
-	}
-	&__span{
-		font-size: 24px;
-		width: 80%;
-		font-family: "Gowun Batang", serif;
-		display: flex;
-		flex-direction: column;
-	}
-}
 @media all and (min-width: 640px) and (max-width: 2600px){
-	.drescode__title {
-			align-items: center;
-			justify-content: center;
-			position: relative;
-
-		}
-	.drescode-pa{
-		position: relative;
-		left: 0;
-		top: 0;
-	}
-	.first{
-		&_section{
-			flex-direction: row;
-			justify-content: space-around;
-			align-items: baseline;
-
-			&-save{
-				justify-content: center;
-			}
-		}
-	}
-	.second-section{
-		height: 100%;
-		padding: 100px;
-	}
     .invite{
         &-section{
             flex-direction: row;
@@ -246,7 +84,7 @@
         }
        
         &-content{
-            width: 100%;
+            width: 50%;
         }
         &-img{
 			display: flex;
@@ -261,33 +99,4 @@
             }
         }
     }
-	.rsvp{
-		width: 50%;
-		position: absolute;
-		top: 420vh;
-	}
-	.telegram_row {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-	}
-	.telegram{
-		&-img {
-				width: 50%;
-				text-align: center;
-		
-				&>img {
-					width: 50%;
-				}
-			}
-		
-			&__span {
-				font-size: 24px;
-				width: 50%;
-				font-family: "Gowun Batang", serif;
-				display: flex;
-				flex-direction: column;
-			}
-	}
 }

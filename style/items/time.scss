@@ -7,12 +7,8 @@
 		width: 100%;
 
 		&-pd{
-			padding-top: 100px;
+			padding-top: 200px;
 		}
-	}
-	&__before::before{
-		content: "LOCATION";
-		font-size: 60px;
 	}
 	&__img{
 		width: 80%;
@@ -23,14 +19,13 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			transform: rotate(45deg);
 
 		}
 
 		&-border{
-			border-radius: 57px 57px 57px 57px;
-			-moz-border-radius: 57px 57px 57px 57px;
-			-webkit-border-radius: 57px 57px 57px 57px;
+			border-radius: 200px 200px 0px 0px;
+			-moz-border-radius: 200px 200px 0px 0px;
+			-webkit-border-radius: 200px 200px 0px 0px;
 			border: 0px solid #000000;
 		}
 	}
@@ -51,15 +46,11 @@
 		align-items: center;
 		width: 100%;
 	}
-	&-title{
-		color: #e4e0db;
-		font-style: italic;
-		font-size: 30px;
+	&__title{
+		border-bottom: 1px solid #e4e0db;
 	}
 	&__text{
 		padding-top: 40px;
-		font-size: 25px;
-
 	}
 	&__border{
 		border-radius: 197px 0px 200px 0px;
@@ -75,37 +66,32 @@
 	width: 50%;
 	height: 400px;
 	position: relative;
-
-	//overflow: hidden;
+	overflow: hidden;
 }
 .color{
+
 	&-japoniga{
 		background-color: #e4e0db;
-		transform: rotate(-45deg);
-	}
-	&-almond{
-		background-color: $Almond;
 	}
 	&1{
-		background-color: #d57757;
+		background-color: black;
 	}
 	&2{
-		background-color: #935b37;
+		background-color: wheat;
+		border: 1px solid black;
 	}
 	&3{
-		background-color: #aa9887;
-	}
-	&4{
-		background-color: #f5f0ed;
-	}
-	&5{
-		background-color: #1a140f;
+		background-color: #FFFEEE;
+		border: 1px solid black;
 	}
 }
 @media all and (min-width: 300px) and (max-width: 640px) {
 	.time{
 		&__section{
 			flex-direction: column;
+			&-pd{
+				padding-top: 0px;
+			}
 
 		}
 		&__img{
@@ -123,18 +109,16 @@
 	}
 }
 @media all and (min-width: 640px) and (max-width: 2600px) {
-	.time__img{
-		position: relative;
-		width: 100%;
-		&>img{
-			transform: none;
+	.time__img {
+			width: 80%;
+			position: relative;
+			top: none;
+			left: none;
+	}
+		.card {
+	
+			
+			height: 60vh;
+			
 		}
-	}
-	.color-japoniga{
-		transform: none;
-	}
-	.time__section{
-		height: 100vh;
-		padding: 0;
-	}
 }

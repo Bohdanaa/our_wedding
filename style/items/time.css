@@ -3,4 +3,110 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  width: 100%;
+}
+.time__section-pd {
+  padding-top: 200px;
+}
+.time__img {
+  width: 80%;
+  position: absolute;
+  top: 20%;
+  left: -4%;
+}
+.time__img > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.time__img-border {
+  border-radius: 200px 200px 0px 0px;
+  -moz-border-radius: 200px 200px 0px 0px;
+  -webkit-border-radius: 200px 200px 0px 0px;
+  border: 0px solid #000000;
+}
+.time__column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  text-align: center;
+}
+.time__row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.time__title {
+  border-bottom: 1px solid #e4e0db;
+}
+.time__text {
+  padding-top: 40px;
+}
+.time__border {
+  border-radius: 197px 0px 200px 0px;
+  -moz-border-radius: 197px 0px 200px 0px;
+  -webkit-border-radius: 197px 0px 200px 0px;
+  border: 1px solid white;
+  width: 80px;
+  height: 80px;
+}
+
+.card {
+  width: 50%;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.color-japoniga {
+  background-color: #e4e0db;
+}
+.color1 {
+  background-color: black;
+}
+.color2 {
+  background-color: wheat;
+  border: 1px solid black;
+}
+.color3 {
+  background-color: #FFFEEE;
+  border: 1px solid black;
+}
+
+@media all and (min-width: 300px) and (max-width: 640px) {
+  .time__section {
+    flex-direction: column;
+  }
+  .time__section-pd {
+    padding-top: 0px;
+  }
+  .time__img {
+    width: 90%;
+    height: 80%;
+  }
+  .time__column {
+    width: 80%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .card {
+    width: 80%;
+  }
+}
+@media all and (min-width: 640px) and (max-width: 2600px) {
+  .time__img {
+    width: 80%;
+    position: relative;
+    top: none;
+    left: none;
+  }
+  .card {
+    height: 60vh;
+  }
 }/*# sourceMappingURL=time.css.map */

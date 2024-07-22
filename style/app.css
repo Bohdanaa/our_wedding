@@ -3,7 +3,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Mrs+Saint+Delafield&family=Nothing+You+Could+Do&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap");
 hr {
   color: #E5E5E5;
   border: 1px solid #E5E5E5;
@@ -24,14 +23,14 @@ html body {
   min-height: 100%;
   font-weight: 400;
   font-style: normal;
-  font-size: 20px;
-  font-family: "Gowun Batang", serif;
+  font-size: 16px;
+  font-family: "Comfortaa", cursive;
   overflow-x: hidden;
 }
 
 body {
   min-width: 320px;
-  background: #fcf7f4;
+  background: #fffbf8;
   width: 100%;
 }
 
@@ -96,7 +95,7 @@ html, body, main {
   font-style: italic;
 }
 .text-title-font-size {
-  font-size: 35px;
+  font-size: 25px;
 }
 .text-margin-top {
   margin-top: 20px;
@@ -127,7 +126,6 @@ html, body, main {
   flex-wrap: nowrap;
   justify-content: space-around;
   width: 100%;
-  padding: 40px;
 }
 .countdown__number {
   display: flex;
@@ -182,7 +180,6 @@ html, body, main {
   line-height: 1rem;
   font-weight: var(--char-font-weight);
   font-size: var(--char-font-size);
-  color: black;
   font-family: var(--char-font-family);
   transform-origin: bottom center;
   transform: rotate(var(--char-rotate));
@@ -225,11 +222,7 @@ html, body, main {
   width: 100%;
 }
 .time__section-pd {
-  padding-top: 100px;
-}
-.time__before::before {
-  content: "LOCATION";
-  font-size: 60px;
+  padding-top: 200px;
 }
 .time__img {
   width: 80%;
@@ -242,12 +235,11 @@ html, body, main {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  transform: rotate(45deg);
 }
 .time__img-border {
-  border-radius: 57px 57px 57px 57px;
-  -moz-border-radius: 57px 57px 57px 57px;
-  -webkit-border-radius: 57px 57px 57px 57px;
+  border-radius: 200px 200px 0px 0px;
+  -moz-border-radius: 200px 200px 0px 0px;
+  -webkit-border-radius: 200px 200px 0px 0px;
   border: 0px solid #000000;
 }
 .time__column {
@@ -266,14 +258,11 @@ html, body, main {
   align-items: center;
   width: 100%;
 }
-.time-title {
-  color: #e4e0db;
-  font-style: italic;
-  font-size: 30px;
+.time__title {
+  border-bottom: 1px solid #e4e0db;
 }
 .time__text {
   padding-top: 40px;
-  font-size: 25px;
 }
 .time__border {
   border-radius: 197px 0px 200px 0px;
@@ -288,34 +277,30 @@ html, body, main {
   width: 50%;
   height: 400px;
   position: relative;
+  overflow: hidden;
 }
 
 .color-japoniga {
   background-color: #e4e0db;
-  transform: rotate(-45deg);
-}
-.color-almond {
-  background-color: #f2d6c3;
 }
 .color1 {
-  background-color: #d57757;
+  background-color: black;
 }
 .color2 {
-  background-color: #935b37;
+  background-color: wheat;
+  border: 1px solid black;
 }
 .color3 {
-  background-color: #aa9887;
-}
-.color4 {
-  background-color: #f5f0ed;
-}
-.color5 {
-  background-color: #1a140f;
+  background-color: #FFFEEE;
+  border: 1px solid black;
 }
 
 @media all and (min-width: 300px) and (max-width: 640px) {
   .time__section {
     flex-direction: column;
+  }
+  .time__section-pd {
+    padding-top: 0px;
   }
   .time__img {
     width: 90%;
@@ -332,18 +317,13 @@ html, body, main {
 }
 @media all and (min-width: 640px) and (max-width: 2600px) {
   .time__img {
+    width: 80%;
     position: relative;
-    width: 100%;
+    top: none;
+    left: none;
   }
-  .time__img > img {
-    transform: none;
-  }
-  .color-japoniga {
-    transform: none;
-  }
-  .time__section {
-    height: 100vh;
-    padding: 0;
+  .card {
+    height: 60vh;
   }
 }
 .feedback {
@@ -366,6 +346,10 @@ html, body, main {
 .feedback__container-img, .feedback__container-forma {
   width: 45%;
   overflow: hidden;
+}
+.feedback__container-img > img {
+  width: 600px;
+  height: 600px;
 }
 .feedback__container-forma > h1 {
   padding-top: 30px;
@@ -394,6 +378,7 @@ html, body, main {
   font-style: italic;
   color: black;
   height: 5vh;
+  background-color: #fffbf8;
 }
 .feedback__presence {
   display: flex;
@@ -410,6 +395,7 @@ html, body, main {
   border: 0px;
   border-bottom: 1px solid black;
   color: black;
+  background-color: #fffbf8;
 }
 .feedback__presence > select > option {
   color: black;
@@ -458,7 +444,8 @@ html, body, main {
 }
 
 /* Сховати оригінальний вигляд чекбокса */
-input[type=checkbox], option {
+input[type=checkbox],
+option {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -472,15 +459,19 @@ input[type=checkbox]::before {
   display: inline-block;
   width: 16px;
   height: 16px;
-  border-radius: 50%; /* Застосувати круглу форму */
-  border: 1px solid black; /* Змінити колір рамки за потребою */
+  border-radius: 50%;
+  /* Застосувати круглу форму */
+  border: 1px solid black;
+  /* Змінити колір рамки за потребою */
   background-color: transparent;
-  margin-right: 5px; /* Додатковий відступ між чекбоксом і текстом */
+  margin-right: 5px;
+  /* Додатковий відступ між чекбоксом і текстом */
 }
 
 /* Змінити вигляд чекбокса при виборі */
 input[type=checkbox]:checked::before {
-  background-color: black; /* Застосувати колір за потребою */
+  background-color: black;
+  /* Застосувати колір за потребою */
 }
 
 label {
@@ -518,6 +509,18 @@ input[type=submit]:hover {
   }
   .feedback__container-img, .feedback__container-forma {
     width: 100%;
+  }
+}
+@media all and (min-width: 640px) and (max-width: 2600px) {
+  .feedback__container::before {
+    content: " ";
+  }
+  .back {
+    display: none;
+  }
+  .feedback__container-img {
+    width: 100%;
+    height: auto;
   }
 }
 .photo__section {
@@ -570,75 +573,18 @@ input[type=submit]:hover {
   font-weight: 400;
 }
 
-.first_section {
-  display: flex;
-  flex-direction: column;
-  padding: 40px;
-  margin-top: 100px;
-}
-.first_section-row {
-  display: flex;
-  flex-direction: row;
-}
-.first_section-date {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  line-height: 80px;
-  font-size: 60px;
-  font-family: "Gowun Batang", serif;
-  font-style: normal;
-  font-weight: 400;
-}
-.first_section-line {
-  height: auto;
-  width: 1px;
-  margin-left: 40px;
-  margin-right: 40px;
-  background-color: grey;
-}
-.first_section-save {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  text-align: center;
-}
-.first_section-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-self: center;
-  padding-top: 100px;
-  font-size: 60px;
-}
-
-.second-section {
-  background-color: #1b1b1b;
-  border-radius: 57px 57px 57px 57px;
-  -moz-border-radius: 57px 57px 57px 57px;
-  -webkit-border-radius: 57px 57px 57px 57px;
-  border: 0px solid #000000;
-  color: white;
-  padding: 40px;
-  height: 700px;
-  padding-top: 90px;
-}
-.second-section::before {
-  content: "OUR DEARS";
-  font-size: 50px;
-  opacity: 0.5;
-  font-style: italic;
-  display: flex;
-  justify-content: center;
-}
-
 .invite-section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 40px;
+  border-radius: 10px 10px 200px 200px;
+  -moz-border-radius: 10px 10px 200px 200px;
+  -webkit-border-radius: 10px 10px 200px 200px;
+  border: 0px solid #000000;
+  background-color: #1b1b1b;
   overflow: hidden;
+  color: white;
 }
 .invite-content {
   display: flex;
@@ -658,7 +604,6 @@ input[type=submit]:hover {
 }
 
 .img_background {
-  background-image: url("/wedding-web2/img/14.png");
   background-size: 100% 100%;
   width: 300px;
   height: 300px;
@@ -667,106 +612,13 @@ input[type=submit]:hover {
   left: 50%;
 }
 
-.drescode__section {
-  display: flex;
-  flex-direction: column;
-  font-size: 60px;
-  line-height: 30px;
-  padding: 40px;
-}
-.drescode__title {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: relative;
-}
-.drescode-pa {
-  position: absolute;
-  left: 35%;
-  top: 65%;
-}
-.drescode_column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 24px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-.drescode_row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.drescode_border {
-  border-radius: 50%;
-  border: 1px solid black;
-  width: 80px;
-  height: 80px;
-}
-
-.telegram {
-  display: flex;
-  flex-direction: column;
-}
-.telegram::before {
-  content: "TELEGRAM";
-  font-size: 60px;
-  text-align: center;
-}
-.telegram_row {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-.telegram-img {
-  width: 80%;
-  text-align: center;
-}
-.telegram-img > img {
-  width: 50%;
-}
-.telegram__span {
-  font-size: 24px;
-  width: 80%;
-  font-family: "Gowun Batang", serif;
-  display: flex;
-  flex-direction: column;
-}
-
 @media all and (min-width: 640px) and (max-width: 2600px) {
-  .drescode__title {
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-  .drescode-pa {
-    position: relative;
-    left: 0;
-    top: 0;
-  }
-  .first_section {
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: baseline;
-  }
-  .first_section-save {
-    justify-content: center;
-  }
-  .second-section {
-    height: 100%;
-    padding: 100px;
-  }
   .invite-section {
     flex-direction: row;
     align-items: center;
   }
   .invite-content {
-    width: 100%;
+    width: 50%;
   }
   .invite-img {
     display: flex;
@@ -780,31 +632,6 @@ input[type=submit]:hover {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
-  }
-  .rsvp {
-    width: 50%;
-    position: absolute;
-    top: 420vh;
-  }
-  .telegram_row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .telegram-img {
-    width: 50%;
-    text-align: center;
-  }
-  .telegram-img > img {
-    width: 50%;
-  }
-  .telegram__span {
-    font-size: 24px;
-    width: 50%;
-    font-family: "Gowun Batang", serif;
-    display: flex;
-    flex-direction: column;
   }
 }
 .container {
@@ -908,17 +735,14 @@ input[type=submit]:hover {
   display: flex;
   justify-content: center;
   width: 100%;
+  background-color: #1b1b1b;
   flex-direction: column;
   padding: 40px;
+  color: white;
 }
 .programa__section > h1 {
   font-size: 36px;
-}
-.programa__section::before {
-  content: "TIMING";
-  font-size: 60px;
-  display: flex;
-  justify-content: center;
+  padding-bottom: 30px;
 }
 .programa__row {
   display: flex;
@@ -932,10 +756,10 @@ input[type=submit]:hover {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  padding-bottom: 30px;
 }
 .programa__title {
   border-bottom: 1px solid #f2d6c3;
-  margin: 20px;
   width: 40vh;
 }
 .programa_items {
@@ -953,14 +777,74 @@ input[type=submit]:hover {
 }
 .programa_background {
   position: absolute;
-  background-size: 100% 100%;
   width: 600px;
   height: 600px;
+}
+.programa_background > img {
+  width: 600px;
+  height: 600px;
+}
+
+.telegram {
+  display: flex;
+  flex-direction: column;
+}
+.telegram::before {
+  content: "TELEGRAM";
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+.telegram_row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.telegram-img {
+  width: 80%;
+  text-align: center;
+}
+.telegram-img > img {
+  width: 50%;
+}
+.telegram__span {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
 }
 
 @media all and (min-width: 300px) and (max-width: 640px) {
   .programa__item {
     display: none;
+  }
+}
+@media all and (min-width: 640px) and (max-width: 2600px) {
+  .rsvp {
+    width: 50%;
+    position: absolute;
+    top: 420vh;
+  }
+  .telegram_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .telegram-img {
+    width: 50%;
+    text-align: center;
+  }
+  .telegram-img > img {
+    width: 50%;
+  }
+  .telegram__span {
+    font-size: 24px;
+    width: 50%;
+    font-family: "Gowun Batang", serif;
+    display: flex;
+    flex-direction: column;
   }
 }
 .organization {

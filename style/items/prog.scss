@@ -3,18 +3,15 @@
 		display: flex;
 		justify-content: center;
 		width: 100%;
+		background-color: #1b1b1b;
 		flex-direction: column;
 		padding: 40px;
+		color: white;
 
 		&>h1{
 			font-size: 36px;
+			padding-bottom: 30px;
 		}
-	}
-	&__section::before{
-		content: "TIMING";
-		font-size: 60px;
-		display: flex;
-		justify-content: center;
 	}
 
 	&__row {
@@ -30,12 +27,13 @@
 		flex-direction: column;
 		justify-content: space-around;
 		align-items: center;
+		padding-bottom: 30px;
 	}
 
 	&__title {
 		border-bottom: 1px solid $Almond;
-		// padding: 20px;
-		margin: 20px;
+	
+	
 		width: 40vh;
 	}
 	&_items{
@@ -52,11 +50,53 @@
 		height: 70vh;
 	}
 	&_background{
-		
-		background-size: 100% 100%;
+		position: absolute;
 		width: 600px;
 		height: 600px;
 
+		&>img{
+			width: 600px;
+			height: 600px;
+		}
+
+	}
+}
+
+
+.telegram {
+	display: flex;
+	flex-direction: column;
+
+	&::before {
+		content: "TELEGRAM";
+		font-size: 24px;
+		text-align: center;
+		font-weight: bold;
+		letter-spacing: 3px;
+
+	}
+
+	&_row {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&-img {
+		width: 80%;
+		text-align: center;
+
+		&>img {
+			width: 50%;
+		}
+	}
+
+	&__span {
+		width: 80%;
+		
+		display: flex;
+		flex-direction: column;
 	}
 }
 
@@ -66,4 +106,38 @@
 			display: none;
 		}
 	}
+}
+
+@media all and (min-width: 640px) and (max-width: 2600px) {
+	.rsvp {
+			width: 50%;
+			position: absolute;
+			top: 420vh;
+		}
+	
+		.telegram_row {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+		}
+	
+		.telegram {
+			&-img {
+				width: 50%;
+				text-align: center;
+	
+				&>img {
+					width: 50%;
+				}
+			}
+	
+			&__span {
+				font-size: 24px;
+				width: 50%;
+				font-family: "Gowun Batang", serif;
+				display: flex;
+				flex-direction: column;
+			}
+		}
 }
