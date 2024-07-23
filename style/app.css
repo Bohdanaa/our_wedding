@@ -492,7 +492,8 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color: black;
+  background-color: #e4e0db;
+  color: black;
 }
 
 .rsvp {
@@ -501,6 +502,16 @@ input[type=submit]:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+  color: black;
+  font-weight: bold;
 }
 
 @media all and (min-width: 300px) and (max-width: 640px) {
